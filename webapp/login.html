@@ -1,0 +1,283 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script language="Javascript" type="text/javascript" src="source/js/jquery.js"></script>
+	<style type="text/css">
+		body{
+			margin:0;
+			padding: 0;
+			background:#F9F9F9;
+		}
+	 	#imagebg{
+			background:url(source/image/fistPage/bg.png) no-repeat; 
+			background-size:100%;
+			height:390px;
+			margin:0 auto;
+			width:100%;
+			padding-top: 20px;
+
+		} 
+
+		#log_name{
+			height:60px;
+			width:700px;
+			margin-left: 385px;		
+		}
+		.head_log{
+			line-height:60px;
+			margin-left:8px;
+			float: left;
+		}
+		.head_log img{
+			margin-top:10px;
+			width: 45px;
+		}
+		.head_log span{
+			
+			font-size: 34px;
+			color: white;
+		}
+		#pagebody{
+			
+			width: 100%
+		}
+		
+		#midlebody{
+			 clear:both;
+			 margin:auto;
+			 margin-top:30px;
+			 margin-bottom:10px;
+			 width:600px;
+			 height:150px;
+		}
+		.query{
+			width: 190px;
+			text-align: center;
+		}
+		.query img{
+			width: 140px;
+		}
+		.query{
+		
+		}
+		.query span{
+			display:block;
+			font-size: 16px;
+			letter-spacing:0px;
+		}
+		
+		/* 
+			尖角框1设置
+		 */
+		#smallwindow{  
+			opacity:0.2;
+	        width: 100%;  
+	        height: 0px;  
+	        border-top:1px solid #000;  
+	        position: relative;  
+	    }  
+	    .small{  
+	        width: 20px;  
+	        height: 20px;  
+	        display: inline-block;  
+	        position: absolute;  
+	        bottom: -10px;  
+	        right: 870px;  
+	        background-color: white;  
+	        border-top: 1px solid #000;  
+	        border-left: 1px solid #000;  
+	        transform:rotate(125deg);  
+	        -ms-transform:rotate(45deg);     /* IE 9 */  
+	        -moz-transform:rotate(45deg);    /* Firefox */  
+	        -webkit-transform:rotate(45deg); /* Safari 和 Chrome */  
+	        -o-transform:rotate(45deg);  /* Opera */  
+	    }  
+	    
+	    #talquery{
+	    	margin: 20px auto;
+	    	width: 800px;
+	    }
+	    #smallchoose1,#smallchoose2{
+	    	display: none;
+	    }
+	    .tdquery img{
+	    	width: 90px;
+	   	    margin:0 55px;
+	    }
+	    td{
+	    	width:200px;
+	    }
+	    .tdmessage{
+	    	height:40px;
+	    	margin-top:30px;
+	    	font-size:14px;
+	    	text-align: center;
+	    }
+		 
+		/* 
+			尖角框2设置
+		 */
+		#smallwindow1{  
+			opacity:0.2;
+	        width: 100%;  
+	        height: 0px;  
+	        border-top:1px solid #000;  
+	        position: relative;  
+	    }  
+	    .small1{  
+	        width: 20px;  
+	        height: 20px;  
+	        display: inline-block;  
+	        position: absolute;  
+	        bottom: -10px;  
+	        right: 460px;  
+	        background-color: white;  
+	        border-top: 1px solid #000;  
+	        border-left: 1px solid #000;  
+	        transform:rotate(125deg);  
+	        -ms-transform:rotate(45deg);     /* IE 9 */  
+	        -moz-transform:rotate(45deg);    /* Firefox */  
+	        -webkit-transform:rotate(45deg); /* Safari 和 Chrome */  
+	        -o-transform:rotate(45deg);  /* Opera */  
+	    }  
+		#footer{
+			margin-top:10px;
+			clear:left;
+			border-top: solid 1px buttonshadow;
+			height: 60px;
+			/* height:60px;
+			padding-top: 10px; */
+		}
+		
+	 a:link,a:visited {
+            color: blue;
+            text-decoration: none;
+        }
+
+        a:hover,a:active {
+        	cursor:pointer;
+        	opacity:0.6;
+            color: blue;
+            text-decoration: underline;
+        }
+	</style>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("#mainimg1").click(function() {
+				if($("#smallchoose2").css("display")!="none"){
+					 $("#smallchoose2").toggle();
+				}
+				$("#smallchoose1").toggle();
+			});
+			$("#mainimg2").click(function() {
+				if($("#smallchoose1").css("display")!="none"){
+						 $("#smallchoose1").toggle();
+				}
+				$("#smallchoose2").toggle();
+			});
+			$("#mainmess1").click(function() {
+				if($("#smallchoose2").css("display")!="none"){
+					 $("#smallchoose2").toggle();
+				}
+				$("#smallchoose1").toggle();
+			});
+			$("#mainmess2").click(function() {
+				if($("#smallchoose1").css("display")!="none"){
+						 $("#smallchoose1").toggle();
+				}
+				$("#smallchoose2").toggle();
+			});
+		});
+		
+	</script>
+  </head>
+  <body>
+	  <div style="width: 1366px;margin:0px 0px">
+	  	  <div id="imagebg">
+			    <div id="log_name">
+			  		<div class="head_log">
+			  			<img src="source/image/fistPage/logo.png"/>
+			  		</div>
+			  		<div  class="head_log">
+			  			<span>成都市食品药品安全信息公示查询平台</span>
+			  		</div>	
+			  	</div>
+		  	</div>
+		  	<div id="pagebody">
+			    <div id="midlebody">
+			    	<div class="query" style="float: left;">
+			    			<a id="mainimg1"><img src="source/image/fistPage/xinxi-ico.png"/></a>
+			    			<span><strong><a id="mainmess1">食品药品安全信息查询</a></strong></span>
+			    	</div>
+			    	<div class="query" style="float: right;">
+				    		<a id="mainimg2"><img src="source/image/fistPage/xinxi2-ico.png"/></a>
+				    		<span><strong><a id="mainmess2">食品药品安全信息公示</a></strong></span>
+			    	</div>
+			    	<div style="clear: both;"></div>
+			    </div>
+			</div>
+		    <div id="smallchoose1">
+			    <div id="smallwindow">
+			    	<span class="small"></span>
+				</div>
+			  
+				<table id="talquery">
+					<tr>
+				    	<td class="tdquery">
+				    		<a><img src="source/image/fistPage/burger-icon-gray.png"/></a>
+				    	</td>
+				    	<td class="tdquery">
+				    		<a><img src="source/image/fistPage/meds-icon-gray.png"/></a>
+				    	</td>
+				    	<td class="tdquery">
+				    		<a><img src="source/image/fistPage/makeup-icon-gray.png"/></a>
+				    	</td>
+				    	<td class="tdquery">
+				    		<a><img src="source/image/fistPage/inject-icon-gray.png"/></a>
+				    	</td>
+					</tr>
+					<tr>
+						<td class="tdmessage"><a>食品</a></td>
+						<td class="tdmessage"><a>药品</a></td>
+						<td class="tdmessage"><a>化妆品</a></td>
+						<td class="tdmessage"><a>医疗器械</a></td>
+					</tr>
+				</table>
+			</div>
+			<div id="smallchoose2">
+			    <div id="smallwindow1">
+			    	<span class="small1"></span>
+				</div>
+			  
+				<table id="talquery">
+					<tr>
+				    	<td class="tdquery">
+				    		<a><img src="source/image/fistPage/record-icon-gary.png"/></a>
+				    	</td>
+				    	<td class="tdquery">
+				    		<a><img src="source/image/fistPage/regulation-icon-gray.png"/></a>
+				    	</td>
+				    	<td class="tdquery">
+				    		<a><img src="source/image/fistPage/penalty-icon-gary.png"/></a>
+				    	</td>
+				    	<td class="tdquery">
+				    		<a><img src="source/image/fistPage/result-icon-gray.png"/></a>
+				    	</td>
+					</tr>
+					<tr>
+						<td class="tdmessage"><a>许可备案</a></td>
+						<td class="tdmessage"><a>政策法规</a></td>
+						<td class="tdmessage"><a>行政处罚</a></td>
+						<td class="tdmessage"><a>检查结果</a></td>
+					</tr>
+				</table>
+			</div>
+		    <div id="footer">
+				<iframe name="content_iframe" scrolling="no" marginwidth="0" marginheight="0" width=100% src="index.html" frameborder=0/>
+		 	</div>
+	  	</div>
+
+	</body>
+</html>
